@@ -27,3 +27,28 @@ const papaJohns = {
 // DO NOT EDIT THE ABOVE OBJECT // 
 
 // YOUR WORK GOES HERE // 
+
+papaJohns.grabCategories = function (obj) {
+  return Object.keys(obj);
+}
+
+papaJohns.grabCategories(papaJohns);
+console.log(papaJohns.grabCategories(papaJohns.pizzaToppings));
+
+papaJohns.verifyValues = function (obj) {
+  const runner = Object.values(obj);
+  if (runner.length === 11) {
+    return true;
+  }
+  return false;
+}
+
+console.log(papaJohns.verifyValues(papaJohns));
+
+papaJohns.getToppingsInfo = function (obj) {
+  return Object.entries(obj);
+}
+
+papaJohns.printAd = function (topp, keyValue) {
+  console.log("Welcome to Papa John's! We are located at " + papaJohns.address + ". This week, we are having a sale on " + topp +" for " + keyValue + ". Better Ingredients. Better Pizza. Papa John's.");
+}

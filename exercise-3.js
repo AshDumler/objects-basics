@@ -26,3 +26,23 @@ const dominos = {
   zipcode: 54321,
   acceptsReservations: true,
 };
+
+dominos.printPizzaPlace = function (obj) {
+  for (const key in obj){
+    console.log(key, obj[key]);
+  }
+  }
+
+  dominos.toppingsPriceRange = function (obj) {
+    const order = Object.values(obj).sort();
+    console.log(order);
+}
+
+dominos.calculateAverageRating = function (obj) {
+  let sum = 0;
+  for (const key in obj) {
+    sum += obj[key];
+    const divide = sum / Object.values(obj).length;
+    return divide
+  }
+}
